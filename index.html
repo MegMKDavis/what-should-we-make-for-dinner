@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+  <head>
+    <!-- css, meta tags, etc -->
+    <link href="styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <!-- content goes here -->
+    <h1>What Should We Make For Dinner?</h1>
+    <p>Good question.</p>
+
+    <div id="chosenRecipe"></div>
+
+    <button id="pickRandomRecipe">How About</button>
+
+    <script>
+      // JS land
+      const button = document.getElementById("pickRandomRecipe")
+      const container = document.getElementById("chosenRecipe")
+
+      button.addEventListener("click", function() {
+        const listOfRecipes = [
+          { 
+            name: "Taco Bowl", 
+            time:"15min", 
+            ingredients: [
+              "Can of beans",
+              "Jar of salsa",
+              "Some rice"
+            ],
+            directions: "Cook the rice, stir in the salsa and the beans, cooking until everything is hot. "
+          }, {
+            name: "Spaghetti",
+            time:"15min",
+            ingredients: [
+              "Some Pasta",
+              "Some Tomato Sauce"
+            ],
+            directions: "Boil the pasta, then pour on the sauce."
+          }]
+        const randomNumber = Math.floor(Math.random() * listOfRecipes.length) 
+
+        const randomRecipe = listOfRecipes[randomNumber]
+
+        console.log(randomRecipe)
+
+        container.innerHTML = `
+          <h3>${randomRecipe.name}</h3>
+          <h4>${randomRecipe.time}</h4>
+          <ul>
+            ${randomRecipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}
+          </ul>
+          <p>${randomRecipe.directions}</p>
+        `
+
+        // make it show up on the page here
+      })
+    </script>
+  </body>
+</html>
