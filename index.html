@@ -8,9 +8,9 @@
     <h1>What Should We Make For Dinner?</h1>
     <p>Good question.</p>
 
-    <div id="chosenRecipe"></div>
-
     <button id="pickRandomRecipe">How About</button>
+
+    <div id="chosenRecipe"></div>
 
     <script>
       // JS land
@@ -19,47 +19,206 @@
 
       button.addEventListener("click", function() {
         const listOfRecipes = [
-          { 
-            name: "Taco Bowl", 
-            time:"15min", 
+
+        {
+           name: "Taco Bowl",
+           time:"15min",
+
+           ingredients: [
+             "Can of beans",
+             "Jar of salsa",
+             "Some rice"
+           ],
+
+           directions: "Cook the rice, stir in the salsa and the beans, cooking until everything is hot. ",
+
+           feelingFancy: [
+             "Add some peppers or tomatoes.",
+             "Add some meat.",
+             "Put some avocados or cheese on top.",
+           ],
+
+           inspirationUrl:"https://wholefully.com/black-bean-burrito-bowls-2/",
+           inspiration:"Wholefully"
+         },
+
+    { 
+            name: "Grilled Cheese and Tomato Soup", 
+            time:"45 min", 
+            ingredients: [
+              "some bread",
+              "some cheese",
+              "some soup",
+            ],
+            directions: "Heat the soup in a pot. Butter both sides of the bread, put some cheese between the slices of bread and cook in a pan until cheese is melted and bread is toasty. ",
+
+  feelingFancy: [
+             "add a tomato or some bacon",
+             "add some onions"
+           ],
+
+           inspirationUrl:"https://www.bonappetit.com/story/common-grilled-cheese-mistakes",
+           inspiration:"Bon Appetit"
+          },
+
+    { 
+            name: "Quesadilla", 
+            time:"15 min", 
             ingredients: [
               "Can of beans",
-              "Jar of salsa",
-              "Some rice"
+              "Some cheese",
+              "A tortilla"    
             ],
-            directions: "Cook the rice, stir in the salsa and the beans, cooking until everything is hot. "
-          }, {
-            name: "Spaghetti",
-            time:"15min",
-            ingredients: [
-              "Some Pasta",
-              "Some Tomato Sauce"
-            ],
-            directions: "Boil the pasta, then pour on the sauce."
+            directions: "Mix cheese and beans. Put cheese and beans on tortilla and fold in half. Cook in pan until the first side is slightly brown. Flip and cook until the cheese is melted through.",
+
+            feelingFancy: [
+             "add some veggies like peppers or onions",
+             "add add some meat",
+             "put some salsa or guac on top"
+           ],
+
+           inspirationUrl:"https://cookieandkate.com/quick-quesadillas-recipe/",
+           inspiration:"Cookie and Kate"
           },
-          { 
-            name: "Scramble", 
-            time:"15min", 
+
+    { 
+            name: "Blackbean Sweet Potato Chili", 
+            time:"45 min", 
             ingredients: [
-              "Olive oil",
-              "Chopped up veggies",
-              "Eggs"
+              "a can of blackbeans",
+              "a jar of salsa",
+              "some chopped up onion",
+              "some sweet potato cubes",
+              "some veggie broth",
+            
             ],
-            directions: "Heat oil in pan, saute veggies until they're soft, add egg and scramble till cooked through. "
-          }]
+            directions: "Saute onions in the bottom of the pot until soft. Add broth, salsa, sweet potatoes and beans. Bring to a boil then simmer until sweet potatoes are soft (30 minutes or so). ",
+
+           feelingFancy: [
+             "Put some avocado on top.",
+             "Add some sauteed veggies.",
+           ],
+
+           inspirationUrl:"https://minimalistbaker.com/5-ingredient-sweet-potato-black-bean-chili/",
+           inspiration:"Minimalist Baker"
+
+          },
+
+    { 
+            name: "Fried Rice", 
+            time:"15 min", 
+            ingredients: [
+              "bag of frozen veggies",
+              "some rice",
+              "some soy sauce",
+              "scrambled eggs",
+            ],
+            directions: "Cook rice (lots of people say day old rice is better, but we are not planning ahead here). Add frozen veggies and soy sauce, stir until warm and coated. Add scrambled eggs.",
+
+           feelingFancy: [
+             "Add some red pepper flakes or ginger.",
+             "Add some tofu or meat.",
+           ],
+                  inspirationUrl:"https://www.markbittman.com/recipes-1/beef-fried-rice-with-frozen-vegetables",
+           inspiration:"Mark Bittman"
+          },
+
+    { 
+            name: "Roasted Chickpea and Veggie Grain Bowl", 
+            time:"15 min", 
+            ingredients: [
+              "a can of chickpeas",
+              "some baby carrots",
+              "some quinoa (or rice)",
+            ],
+            directions: "Cook the quinoa. Put the chickpeas and baby carrots on a sheet pan. Cover in olive oil, salt and pepper. Roast at 425 till cooked (20 minutes?). ",
+
+           feelingFancy: [
+             "make some of Caroline’s tahini sauce (see below)",
+             "use a different veggie",
+           ],
+                  inspirationUrl:"https://www.nourishedbycaroline.ca/roasted-carrot-chickpea-buddha-bowl/",
+           inspiration:"Nourished by Caroline"
+
+          },
+      
+   {
+           name: "Spaghetti",
+           time:"15min",
+           ingredients: [
+             "Some Pasta",
+             "Some Tomato Sauce"
+           ],
+           directions: "Boil the pasta, drain, then pour on the sauce.",
+
+           feelingFancy: [
+             "add some sauteed onions and garlic to the sauce",
+             "add some tvp or ground meat",
+           ],
+                     inspirationUrl:"https://food52.com/blog/22236-how-to-make-store-bought-tomato-sauce-much-better",
+           inspiration:"Food52"
+         },
+
+         {
+           name: "Egg Scramble",
+           time:"15min",
+           ingredients: [
+             "Olive oil",
+             "Chopped up veggies",
+             "Eggs"
+           ],
+           directions: "Heat oil in pan, saute veggies until they're soft, add egg and scramble till cooked through. ",
+
+      feelingFancy: [
+             "add some sausage",
+             "top with hot sauce",
+           ],
+                     inspirationUrl:"https://www.bonappetit.com/test-kitchen/how-to/article/best-scrambled-eggs",
+           inspiration:"Bon Appetit"
+
+
+         },
+         {
+           name: "Sheet Pan Dinner",
+           time:"45 min",
+           ingredients: [
+             "Olive oil",
+             "Salt and pepper",
+             "Some chopped up veggies",
+             "Some sausage"
+           ],
+           directions: "Preheat the oven to 400. Chop veggies, cover them in olive oil and salt and put them on the pan. Put them in the oven until soft (10 minutes left). Add the sausage to the pan and cook until everything is browned. ",
+
+            feelingFancy: [
+             "coat sausage with honey mustard",
+             "serve on a toasty bun",
+           ],
+                     inspirationUrl:"https://cooking.nytimes.com/recipes/1020747-sheet-pan-sausages-and-brussels-sprouts-with-honey-mustard",
+           inspiration:"New York Times"
+         }
+
+        
+        ]
         const randomNumber = Math.floor(Math.random() * listOfRecipes.length) 
 
-        const randomRecipe = listOfRecipes[randomNumber]
+        const randomRecipe = listOfRecipes [randomNumber]
 
         console.log(randomRecipe)
 
         container.innerHTML = `
-          <h3>${randomRecipe.name}</h3>
-          <h4>${randomRecipe.time}</h4>
+          <h2>${randomRecipe.name}</h2>
+          <p>${randomRecipe.time}</p>
+          <h3>Ingredients</h3>
           <ul>
-            ${randomRecipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}
+            ${randomRecipe.ingredients.map(function(ingredient) { return `<li>${ingredient}</li>` }).join("")}
           </ul>
+          <h3>Directions</h3>
           <p>${randomRecipe.directions}</p>
+          <h3>Feeling Fancy?</h3>
+          <ul>
+            ${randomRecipe.feelingFancy.map(suggestion => `<li>${suggestion}</li>`).join("")}
+            </ul>
+          <p> Don't trust me? <a href="${randomRecipe.inspirationUrl}" target="_blank">${randomRecipe.inspiration}</a> knows what they are talking about.
         `
 
         // make it show up on the page here
