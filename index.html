@@ -4,13 +4,17 @@
     <link href="styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <!-- content goes here -->
-    <h1>What Should We Make For Dinner?</h1>
-    <p>Good question.</p>
+    <div class="wrapper">
+      <!-- content goes here -->
+      <div class="center">
+        <h1>What Should We Make For Dinner?</h1>
+        <p>Good question.</p>
+  
+        <button id="pickRandomRecipe">How About</button>
+      </div>
 
-    <button id="pickRandomRecipe">How About</button>
-
-    <div id="chosenRecipe"></div>
+      <div id="chosenRecipe"></div>
+    </div>
 
     <script>
       // JS land
@@ -44,7 +48,7 @@
 
     { 
             name: "Grilled Cheese and Tomato Soup", 
-            time:"45 min", 
+            time:"15 min", 
             ingredients: [
               "some bread",
               "some cheese",
@@ -160,7 +164,7 @@
          },
 
          {
-           name: "Egg Scramble",
+           name: "Eggy Scramble",
            time:"15min",
            ingredients: [
              "Olive oil",
@@ -187,11 +191,30 @@
              "Some chopped up veggies",
              "Some sausage"
            ],
-           directions: "Preheat the oven to 400. Chop veggies, cover them in olive oil and salt and put them on the pan. Put them in the oven until soft (10 minutes left). Add the sausage to the pan and cook until everything is browned. ",
+           directions: "Preheat the oven to 400. Chop veggies, cover them in olive oil and salt and put them on the pan. Put them in the oven until soft (10 minutes left). Add the sausage to the pan and cook for about 10 more minutes, until everything is browned. ",
 
             feelingFancy: [
              "coat sausage with honey mustard",
              "serve on a toasty bun",
+           ],
+                     inspirationUrl:"https://cooking.nytimes.com/recipes/1020747-sheet-pan-sausages-and-brussels-sprouts-with-honey-mustard",
+           inspiration:"New York Times"
+         },
+
+         {
+           name: "Fried Egg Sandwich",
+           time:"15 min",
+           ingredients: [
+             "some eggs",
+             "salt and pepper",
+             "some cheese",
+             "swo pieces of bread"
+           ],
+           directions: "Put your bread in the toaster. Fry your eggs. Right before their done, put some cheese on top. Butter your bread and assemble your sandwich.",
+
+            feelingFancy: [
+             "add some sauteed spinach",
+             "add some sausage",
            ],
                      inspirationUrl:"https://cooking.nytimes.com/recipes/1020747-sheet-pan-sausages-and-brussels-sprouts-with-honey-mustard",
            inspiration:"New York Times"
