@@ -14,6 +14,12 @@ body {
   margin-right: auto;
 }
 
+.about-wrapper {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .center {
   text-align: center;
 }
@@ -50,14 +56,32 @@ button:hover {
   background-color: #4e3a96;
 }
 
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
 footer {
-  padding-bottom: 50px;
+  position: fixed;
+  left: 0;
+  right:0px;
+  bottom:0px;
+  padding: 15px;
   background-color: #ffffff;
   font-family: "Lucida Grande", Tahoma;
   font-weight: lighter;
   color:#6f6b80;
   text-align: right;
   text-anchor: end;
-  padding-right: 100px;
   font-size: smaller;
+}
+
+.pantry-list {
+  font-family: "Lucida Grande", Tahoma;
+  font-weight: lighter;
+  color:rgb(111, 107, 128);
+  font-size: medium;
 }
